@@ -9,9 +9,9 @@
     --dark-grayish-blue: #9095a7;
     --very-dark-blue: rgb(29,30,37);
     --very-pale-red: #ffefeb;
-    --very-light-gray: #fafafa;
-    
+    --very-light-gray: #fafafa;   
 }
+
 /* Use as boilerplate - zero out everything on the page before styling */
 *{
     padding: 0;
@@ -33,7 +33,6 @@ html{
     background-size: 50%;
     background-position: 90% 0%;
 }
-
 .max-width{
     max-width: 1000px;
     /* margin-top: 0;
@@ -43,23 +42,19 @@ html{
     margin: 0 auto;
     padding-top: 20px;
 }
-
 header{
     width: 100%;
     padding: 10px 0;
 }
-
 header .nav-wrapper{
     display: flex;
     align-items: center;
     justify-content: space-between;
     text-align: center;
 }
-
 p{
     color: var(--dark-grayish-blue);
 }
-
 nav a{
     text-decoration: none;
     color: var(--purple);
@@ -67,7 +62,6 @@ nav a{
     margin: 0 15px;
 
 }
-
 .btn-join-now a,
 .btn-join-now-b a{
     background: var(--dark-red);
@@ -82,7 +76,6 @@ nav a{
     white-space: nowrap;
     transition: .3s;
 }
-
 .btn-join-now a:hover,
 .btn-join-now-b a:hover{
     background: #ff4b4b;
@@ -90,17 +83,15 @@ nav a{
     color: #fff;
 }
 
-/* ====================================Hero section================================== */
+/* ==================================== Hero Section ================================== */
 .hero{
    display: flex;
    justify-content: center;
    align-items: center; 
 }
-
 .hero-image img{
     width: 100%;
 }
-
 .hero-text h1{
     color: var(--purple);
     font-weight: 700;
@@ -109,17 +100,15 @@ nav a{
     margin-bottom: 20px;
 }
 
-/* =======================Hero Text============================ */
+/* ======================= Hero Text Section ============================ */
 .hero-text{
     width: 50%;
 }
-
 .hero-text p{
     font-weight: 500;
     margin-bottom: 20px;
     padding-right: 100px;
 }
-
 .hero-image{
     display: flex;
     align-items: center;
@@ -127,12 +116,11 @@ nav a{
     width: 50%;
 }
 
-/* ===========================Why Choose use========================= */
+/* =========================== Why Choose Us Section ========================= */
 .section-title{
     text-align: center;
     padding-bottom: 40px;
     padding-top: 60px;
-
 }
 .section-title h2{
     font-size: 3.2rem;
@@ -152,9 +140,7 @@ nav a{
     width: 12rem;
     height: .1rem;
     background: #ddd; 
-
 }
-
 .section-title h2::after{
     content: '';
     position: absolute;
@@ -164,6 +150,7 @@ nav a{
     width: 40px;
     height: 3px;
     background-color: var(--dark-red);
+    bottom: 1p;
 }
 
 .row{
@@ -202,7 +189,8 @@ nav a{
 
 .btn-1{
     margin-right: 16px;
-    padding: 6.5px 25px;
+    padding: 6.5px 24px;
+    /* padding: 6.5px 25px; */
     font-weight: 500;
     font-size: 1rem;
 }
@@ -262,7 +250,7 @@ nav a{
     border: 2px solid var(--purple);
 }
 
-/* -------------------------Pricing-------------------------------- */
+/* ------------------------- Pricing Section -------------------------------- */
 .pricing{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -273,7 +261,9 @@ nav a{
 
 .pricing .box{
     padding: 40px;
-    margin-bottom: 80px;
+    /* see .pricing .featured */
+    /* margin-bottom: 80px; */
+    margin-bottom: 30px;
     box-shadow: 0px 0px 30px rgba(73, 78, 92, 0.15);
     background: #fff;
     text-align: center;
@@ -346,10 +336,11 @@ nav a{
 
 .pricing .featured{
     z-index: 40;
-    margin: -115px -5px 0 -5px;
+    /* see .pricing .box */
+    /* margin: -115px -5px 0 -5px; */
     /* z-index: 40;
     /* trying playing with the margin below to have the middle box floating */
-    /* margin: -70px -5px 0 -5px; */ 
+    margin: -70px -5px 0 -5px; 
 }
 
 .pricing .featured .btn-buy{
@@ -360,7 +351,7 @@ nav a{
     background: #ff4b4b;
 }
 
-/* ============================frequently asked questions================= */
+/* ============================ Frequently Asked Questions Section ================= */
 
 button.accordion{
     width: 100%;
@@ -383,6 +374,14 @@ button.accordion::after{
     float: right;   
 }
 
+button.accordion.is-open:after{
+    content: '\f056';
+}
+
+button.accordion.is-open{
+    color: #e43c5c;
+}
+
 button.accordion:hover{
     color: var(--dark-red);
     font-weight: 600;
@@ -397,3 +396,220 @@ button.accordion:hover{
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
+
+
+
+/* =================================================================Testimonal Section ==================================== */
+
+.wrapper{
+    margin: auto;
+    padding: 20px 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wrapper .box{
+    background: #fff;
+    width: calc(33% - 10px);
+    padding: 25px;
+    border-radius: 3px;
+    box-shadow: 0px 4px 8px rgb(0, 0, 0, 0.15);
+}
+
+.wrapper .box i.fa-quote-left{
+    font-size: 2rem;
+    color: var(--purple);
+}
+
+.wrapper .box .content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.box .content .image{
+    height: 75px;
+    width: 75px;
+    padding: 3px;
+    background: var(--dark-red);
+    border-radius: 50%;
+}
+
+.content .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.box .info .name{
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.box .info .job{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--purple);
+}
+
+.box .info .stars{
+    margin-top: 2px;
+}
+
+.box .info .stars i{
+    color: var(--dark-red);
+}
+
+.box:hover .content .image img{
+    border-color: #fff;
+}
+
+/* -------------------------- Footer Section ---------------------------- */
+
+#footer{
+    background: url("./images/footer-bg.jpg") center center no-repeat;
+    color: #fff;
+    font-size: 14px;
+    position: relative;
+    background-size: cover;
+}
+
+#footer::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(150, 0, 0, 0.85);
+    z-index: 1;
+}
+#footer .footer-top{
+    position: relative;
+    /* brings the white writing above use the z-index */
+    z-index: 2;
+    text-align: center;
+    padding: 80px 20px;  
+}
+
+#footer .footer-top h3{
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+    position: relative;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+#footer .footer-top p{
+    font-size: 15px;
+    font-style: italic;
+    margin: 30px 0 0 0;
+    padding: 0;
+    color: #fff;
+}
+
+#footer .row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+#footer .column{
+    display: flex;
+    flex-direction: column;
+    flex-basis: fit-content;
+}
+
+#footer .footer-top .footer-newsletter{
+    text-align: center;
+    font-size: 15px;
+    margin-top: 30px;
+}
+
+#footer .footer-top .footer-newsletter form{
+    background: #fff;
+    padding: 5px 10px;
+    position: relative;
+    border-radius: 50px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+#footer .footer-top .footer-newsletter form input[type='email']{
+    border: 0;
+    padding: 4px 8px;
+    width: calc(100% - 100px);
+}
+/* short form would be to start at form or input */
+#footer .footer-top .footer-newsletter form input[type='submit']{
+    position: absolute;
+    top: 0;
+    right: -1px;
+    bottom: 0;
+    border: 0;
+    background: none;
+    font-size: 16px;
+    padding: 0 20px;
+    background: var(--purple);
+    color: #fff;
+    transition: 0.3s;
+    border-radius: 50px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+#footer .footer-top .footer-newsletter form input[type='submit']:hover{
+    background: #ff1088;
+}
+
+#footer .footer-top .social-links{
+    margin-top: 30px;
+}
+
+#footer .footer-top .social-links a{
+    font-size: 18px;
+    display: inline-block;
+    background: var(--dark-red);
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-justify: center;
+    width: 36px;
+    /* height: 36px; */
+    transition: 0.3s;
+}
+#footer .footer-top .social-links a:hover{
+    background: var(--purple);
+    color: #fff;
+    text-decoration: none;
+}
+
+#footer .footer-bottom{
+    border-top: 1px solid var(--dark-red);
+    z-index: 2;
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#footer .copyright{
+    text-align: center;
+    float: left;
+}
+
+#footer .credits{
+    float: right;
+    text-align: center;
+    font-size: 13px;
+}
+
