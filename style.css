@@ -796,12 +796,14 @@ button.accordion:hover{
 .contact-info .contact-us-box{
     /* see .pricing .featured */
     margin-top: 80px;
-    margin-left: 20px;    
+    margin-left: 20px;
+    margin-right: 20px; 
+    align-items: center;   
 }
 
 .contact-info h3{
     font-weight: 300;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
     font-size: 2rem;
     font-weight: bold;
     text-align: justify;
@@ -810,7 +812,9 @@ button.accordion:hover{
 }
 .contact-info p{
     text-align: left;
-    margin-left: 10.1%;
+    margin-left: 7.4%;
+    margin-right: 50px;
+
 }
 
 .contact-info h4{
@@ -830,6 +834,10 @@ button.accordion:hover{
     /* padding-left: 0;  */
     /* text-align: center;  */
 }
+/* .contact-info h4 span a{
+    display: block;
+    margin-left: 10px ;
+} */
 
 .contact-info ul{
     padding: 0;
@@ -853,8 +861,8 @@ button.accordion:hover{
  } 
  .contact-message h3{
      width: 80%;
-     margin-left: 10.1%;
-     margin-top: 50px;   
+     margin-left: 7.2%;
+     margin-top: 30px;   
  }
 
  .vl {
@@ -862,15 +870,19 @@ button.accordion:hover{
     height: 285px;
     margin-top: 55px;
   }
+.form-action{
+    margin-right: 24px;
+}
 
 input[type=text], select, textarea {
-        width: 80%; /* Full width */
-        padding: 12px; /* Some padding */ 
+        width: 85%; /* Full width */
+        padding: 11px; /* Some padding */ 
         border: 1px solid #ccc; /* Gray border */
         border-radius: 4px; /* Rounded borders */
         box-sizing: border-box; /* Make sure that padding and width stays in place */
         margin-top: 6px; /* Add a top margin */
         margin-bottom: 12px; /* Bottom margin */
+        /* margin-left: 5.5%; */
         resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
         background-color:lightpink;
       
@@ -898,7 +910,7 @@ input[type=text], select, textarea {
     font-weight: 500;
     white-space: nowrap;
     transition: .3s;
-    margin-left: 9.9%;
+    margin-left: 7.2%;
 }
 
 .btn-send-now a:hover {
